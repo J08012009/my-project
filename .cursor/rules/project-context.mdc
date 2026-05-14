@@ -1,0 +1,9 @@
+Check prerequisites: Ensure `.env` and `MASTER_CONTEXT.md` exist; direct users to run setup if missing.
+
+Load project memory: At the start of substantive work, read `MASTER_CONTEXT.md` for brand voice, credit costs, default product, and API learnings.
+
+Complete missing data: If the context file has empty fields, ask the user to populate them and write the values back.
+
+Maintain changelog: After significant changes, append dated entries to the Changelog section in `MASTER_CONTEXT.md`.
+
+Follow external API guidance: For Arcads HTTP usage, consult the skill documentation at `.cursor/skills/arcads-external-api/SKILL.md`.
