@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get a Free Quote – ParkGard Health Insurance</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">
+        <span class="logo-icon">🎡</span>
+        <span class="logo-text">Park<span class="logo-accent">Gard</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="plans.html">Plans</a></li>
+        <li><a href="who-we-cover.html">Who We Cover</a></li>
+        <li><a href="benefits.html">Benefits</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="quote.html" class="btn btn-primary">Get a Quote</a>
+      </div>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero" style="padding-bottom:80px;">
+    <div class="container">
+      <div class="section-badge" style="background:rgba(255,255,255,.15);color:#fff;margin-bottom:16px;">Free, No-Obligation</div>
+      <h1>Get Your Free Quote</h1>
+      <p>Answer a few quick questions and we'll show you personalized plan options in minutes.</p>
+    </div>
+  </section>
+
+  <section style="margin-top:-60px;padding-bottom:96px;background:var(--bg-light);">
+    <div class="container">
+      <div class="quote-form-wrapper">
+        <div class="quote-steps">
+          <div class="quote-step active" id="step1-nav">
+            <div class="qs-num">1</div>
+            <span>About You</span>
+          </div>
+          <div class="quote-step-line"></div>
+          <div class="quote-step" id="step2-nav">
+            <div class="qs-num">2</div>
+            <span>Your Work</span>
+          </div>
+          <div class="quote-step-line"></div>
+          <div class="quote-step" id="step3-nav">
+            <div class="qs-num">3</div>
+            <span>Coverage Needs</span>
+          </div>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="quote-form-step" id="step1">
+          <h3>Tell us about yourself</h3>
+          <p class="step-subtitle">This helps us find plans available in your area.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="Alex" />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Johnson" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Date of Birth</label>
+              <input type="date" />
+            </div>
+            <div class="form-group">
+              <label>ZIP Code</label>
+              <input type="text" placeholder="32830" maxlength="5" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="alex@email.com" />
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="(555) 000-0000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Tobacco Use</label>
+            <select>
+              <option value="">Select...</option>
+              <option>No</option>
+              <option>Yes</option>
+            </select>
+          </div>
+          <button class="btn btn-primary btn-full" onclick="goStep(2)">Continue →</button>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="quote-form-step hidden" id="step2">
+          <h3>Tell us about your work</h3>
+          <p class="step-subtitle">We'll match you with plans designed for your industry.</p>
+          <div class="form-group">
+            <label>Industry Type</label>
+            <select id="industrySelect" onchange="updateRoles()">
+              <option value="">Select your industry...</option>
+              <option value="theme-park">Theme Park</option>
+              <option value="amusement-park">Amusement / Water Park</option>
+              <option value="carnival">Carnival / Traveling Fair</option>
+              <option value="fair">State / County Fair</option>
+              <option value="creator">Content Creator / Influencer</option>
+              <option value="other">Other Entertainment</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Role</label>
+            <select id="roleSelect">
+              <option value="">Select industry first...</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Employment Status</label>
+            <select>
+              <option>Full-time employee (W-2)</option>
+              <option>Part-time employee (W-2)</option>
+              <option>Seasonal employee</option>
+              <option>Self-employed / 1099 contractor</option>
+              <option>Business owner</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Estimated Annual Income</label>
+              <select>
+                <option>Under $25,000</option>
+                <option selected>$25,000 – $50,000</option>
+                <option>$50,000 – $75,000</option>
+                <option>$75,000 – $100,000</option>
+                <option>Over $100,000</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Do you travel for work?</label>
+              <select>
+                <option>No, I work at a fixed location</option>
+                <option>Occasionally (1-3 states)</option>
+                <option>Frequently (4+ states)</option>
+                <option>Full circuit / year-round travel</option>
+              </select>
+            </div>
+          </div>
+          <div style="display:flex;gap:12px;">
+            <button class="btn btn-outline" onclick="goStep(1)">← Back</button>
+            <button class="btn btn-primary" style="flex:1;" onclick="goStep(3)">Continue →</button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="quote-form-step hidden" id="step3">
+          <h3>What coverage do you need?</h3>
+          <p class="step-subtitle">Help us understand your priorities.</p>
+          <div class="form-group">
+            <label>Who needs coverage?</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="coverage" value="just-me" checked />
+                <span>Just me</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="coverage" value="me-spouse" />
+                <span>Me + Spouse/Partner</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="coverage" value="me-children" />
+                <span>Me + Children</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="coverage" value="family" />
+                <span>Family</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Monthly budget for premiums</label>
+            <select>
+              <option>Under $100/month</option>
+              <option>$100 – $175/month</option>
+              <option selected>$175 – $250/month</option>
+              <option>$250 – $350/month</option>
+              <option>Over $350/month</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>What's most important to you? (select all that apply)</label>
+            <div class="checkbox-group">
+              <label class="checkbox-option"><input type="checkbox" checked /> Low monthly premium</label>
+              <label class="checkbox-option"><input type="checkbox" checked /> Low deductible</label>
+              <label class="checkbox-option"><input type="checkbox" /> Dental & vision included</label>
+              <label class="checkbox-option"><input type="checkbox" /> Mental health coverage</label>
+              <label class="checkbox-option"><input type="checkbox" /> Family coverage</label>
+              <label class="checkbox-option"><input type="checkbox" /> Prescription coverage</label>
+              <label class="checkbox-option"><input type="checkbox" /> Telehealth access</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>When do you need coverage to start?</label>
+            <select>
+              <option>As soon as possible</option>
+              <option>Within 30 days</option>
+              <option>Next month</option>
+              <option>Beginning of next season</option>
+            </select>
+          </div>
+          <div style="display:flex;gap:12px;">
+            <button class="btn btn-outline" onclick="goStep(2)">← Back</button>
+            <button class="btn btn-primary" style="flex:1;" onclick="submitQuote()">See My Plans →</button>
+          </div>
+        </div>
+
+        <!-- Results Placeholder -->
+        <div class="quote-form-step hidden" id="step4">
+          <div style="text-align:center;padding:32px 0;">
+            <div style="font-size:3rem;margin-bottom:16px;">🎉</div>
+            <h3>Your plans are ready!</h3>
+            <p style="color:var(--text-muted);margin-bottom:24px;">Based on your answers, here are our top plan recommendations for you. A licensed agent will also reach out within 24 hours.</p>
+            <div class="result-plans">
+              <div class="result-plan-card">
+                <div class="rp-badge">Best Match</div>
+                <div class="rp-name">ParkPlus Gold</div>
+                <div class="rp-price">$159<span>/mo</span></div>
+                <div class="rp-features">
+                  <span>✓ Full medical</span>
+                  <span>✓ Dental & vision</span>
+                  <span>✓ Mental health</span>
+                </div>
+                <a href="enroll.html?plan=gold" class="btn btn-primary btn-full">Enroll in Gold</a>
+              </div>
+              <div class="result-plan-card secondary">
+                <div class="rp-name">ParkGuard Starter</div>
+                <div class="rp-price">$89<span>/mo</span></div>
+                <div class="rp-features">
+                  <span>✓ Emergency care</span>
+                  <span>✓ Telehealth</span>
+                  <span>✓ Preventive</span>
+                </div>
+                <a href="enroll.html?plan=starter" class="btn btn-outline btn-full">Enroll in Starter</a>
+              </div>
+            </div>
+            <p style="margin-top:20px;"><a href="plans.html" style="color:var(--primary);font-weight:600;">View all plan options →</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Signals -->
+      <div class="quote-trust">
+        <div class="qt-item"><span>🔒</span> Your information is secure and never sold</div>
+        <div class="qt-item"><span>📞</span> A licensed agent reviews every quote</div>
+        <div class="qt-item"><span>⚡</span> Most approvals within 48 hours</div>
+        <div class="qt-item"><span>💯</span> No obligation to enroll</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-icon">🎡</span><span class="logo-text">Park<span class="logo-accent">Gard</span></span></div>
+          <p>Health insurance purpose-built for the entertainment industry.</p>
+        </div>
+        <div class="footer-col"><h4>Plans</h4><ul><li><a href="plans.html">View All Plans</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ParkGard Insurance LLC. All rights reserved.</p>
+        <div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div>
+        <p class="footer-disclaimer">ParkGard Insurance LLC is licensed in all 50 states.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <style>
+    .quote-steps {
+      display: flex;
+      align-items: center;
+      margin-bottom: 36px;
+      gap: 0;
+    }
+    .quote-step {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      opacity: .4;
+      transition: var(--transition);
+    }
+    .quote-step.active { opacity: 1; }
+    .quote-step.done { opacity: .7; }
+    .qs-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--border);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .8rem;
+      font-weight: 700;
+      transition: var(--transition);
+    }
+    .quote-step.active .qs-num { background: var(--primary); color: #fff; }
+    .quote-step.done .qs-num { background: var(--success); color: #fff; }
+    .quote-step span { font-size: .875rem; font-weight: 600; }
+    .quote-step-line {
+      flex: 1;
+      height: 2px;
+      background: var(--border);
+      margin: 0 12px;
+    }
+    .quote-form-step h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .step-subtitle { color: var(--text-muted); font-size: .9rem; margin-bottom: 28px; }
+    .hidden { display: none; }
+    .radio-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .radio-option, .checkbox-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: .875rem;
+    }
+    .radio-option:hover, .checkbox-option:hover { border-color: var(--primary); background: var(--primary-light); }
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .quote-trust {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .qt-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .85rem;
+      color: var(--text-muted);
+    }
+    .result-plans {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .result-plan-card {
+      background: var(--bg-light);
+      border: 2px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      min-width: 220px;
+      text-align: center;
+      position: relative;
+    }
+    .result-plan-card:not(.secondary) { border-color: var(--primary); }
+    .rp-badge {
+      position: absolute;
+      top: -13px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: #fff;
+      padding: 3px 14px;
+      border-radius: 100px;
+      font-size: .72rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .rp-name { font-weight: 700; font-size: 1rem; margin-bottom: 8px; }
+    .rp-price { font-family: var(--font-display); font-size: 2rem; font-weight: 900; margin-bottom: 12px; }
+    .rp-price span { font-size: .9rem; font-weight: 400; color: var(--text-muted); }
+    .rp-features { display: flex; flex-direction: column; gap: 4px; margin-bottom: 16px; font-size: .8rem; color: var(--text-muted); }
+  </style>
+  <script>
+    const roles = {
+      'theme-park': ['Ride Operator','Park Attendant','Food & Beverage','Maintenance','Costumed Character','Security','Retail Staff','Lifeguard','Manager','Photographer','Entertainment Cast'],
+      'amusement-park': ['Waterslide Operator','Lifeguard','Go-Kart Staff','Arcade Attendant','Mini-Golf Staff','Manager','Trampoline Park Staff','Laser Tag Operator'],
+      'carnival': ['Ride Operator','Game Booth Operator','Food Vendor','Performer','Setup/Teardown Crew','Manager','Circus Performer'],
+      'fair': ['Fair Staff','Food Vendor','Game Operator','Exhibit Manager','Security','Entertainment Manager'],
+      'creator': ['YouTube Creator','TikToker','Instagram Influencer','Blogger','Podcaster','Freelance Photographer','Videographer'],
+      'other': ['Performer','Technician','Manager','Vendor','Other']
+    };
+
+    function updateRoles() {
+      const industry = document.getElementById('industrySelect').value;
+      const roleSelect = document.getElementById('roleSelect');
+      roleSelect.innerHTML = '<option value="">Select your role...</option>';
+      if (roles[industry]) {
+        roles[industry].forEach(r => {
+          const opt = document.createElement('option');
+          opt.value = r.toLowerCase().replace(/ /g, '-');
+          opt.textContent = r;
+          roleSelect.appendChild(opt);
+        });
+      }
+    }
+
+    function goStep(n) {
+      for (let i = 1; i <= 4; i++) {
+        document.getElementById('step' + i).classList.add('hidden');
+        const nav = document.getElementById('step' + i + '-nav');
+        if (nav) {
+          nav.classList.remove('active', 'done');
+          if (i < n) nav.classList.add('done');
+        }
+      }
+      document.getElementById('step' + n).classList.remove('hidden');
+      const nav = document.getElementById('step' + n + '-nav');
+      if (nav) nav.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function submitQuote() {
+      goStep(4);
+    }
+
+    // Pre-select plan from URL param
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('type')) {
+      document.getElementById('industrySelect').value = params.get('type');
+      updateRoles();
+    }
+  </script>
+</body>
+</html>

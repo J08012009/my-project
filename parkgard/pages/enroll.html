@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enroll Now – ParkGard Health Insurance</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">
+        <span class="logo-icon">🎡</span>
+        <span class="logo-text">Park<span class="logo-accent">Gard</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="plans.html">Plans</a></li>
+        <li><a href="who-we-cover.html">Who We Cover</a></li>
+        <li><a href="benefits.html">Benefits</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="quote.html" class="btn btn-outline">Get a Quote</a>
+      </div>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-badge" style="background:rgba(255,255,255,.15);color:#fff;margin-bottom:16px;">Start Today</div>
+      <h1>Enroll in ParkGard</h1>
+      <p>Complete enrollment in under 10 minutes. Most applicants approved within 48 hours.</p>
+    </div>
+  </section>
+
+  <section style="padding:64px 0 96px;background:var(--bg-light);">
+    <div class="container">
+      <!-- Plan Selector -->
+      <div class="enroll-plan-select">
+        <h3>Which plan are you enrolling in?</h3>
+        <div class="enroll-plans">
+          <div class="enroll-plan-option" onclick="selectPlan(this, 'starter')">
+            <div class="ep-check">○</div>
+            <div class="ep-info">
+              <strong>ParkGuard Starter</strong>
+              <span>from $89/month</span>
+            </div>
+          </div>
+          <div class="enroll-plan-option selected" onclick="selectPlan(this, 'gold')">
+            <div class="ep-check">●</div>
+            <div class="ep-info">
+              <strong>ParkPlus Gold</strong>
+              <span>from $159/month — Most Popular</span>
+            </div>
+          </div>
+          <div class="enroll-plan-option" onclick="selectPlan(this, 'platinum')">
+            <div class="ep-check">○</div>
+            <div class="ep-info">
+              <strong>ParkElite Platinum</strong>
+              <span>from $249/month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-form-wrapper" style="margin-top:32px;">
+        <h3>Application Form</h3>
+        <p class="step-subtitle">All information is encrypted and protected. We never sell your data.</p>
+
+        <h4 style="margin:24px 0 16px;font-size:.875rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);">Personal Information</h4>
+        <div class="form-row">
+          <div class="form-group"><label>First Name *</label><input type="text" placeholder="Alex" required /></div>
+          <div class="form-group"><label>Last Name *</label><input type="text" placeholder="Johnson" required /></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Date of Birth *</label><input type="date" required /></div>
+          <div class="form-group"><label>Social Security Number *</label><input type="text" placeholder="XXX-XX-XXXX" /></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Email Address *</label><input type="email" placeholder="alex@email.com" required /></div>
+          <div class="form-group"><label>Phone Number *</label><input type="tel" placeholder="(555) 000-0000" required /></div>
+        </div>
+
+        <h4 style="margin:24px 0 16px;font-size:.875rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);">Address</h4>
+        <div class="form-group"><label>Street Address *</label><input type="text" placeholder="1234 Park Blvd" /></div>
+        <div class="form-row">
+          <div class="form-group"><label>City *</label><input type="text" placeholder="Orlando" /></div>
+          <div class="form-group"><label>State *</label><select><option value="">Select...</option><option>FL</option><option>CA</option><option>TX</option><option>NY</option></select></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>ZIP Code *</label><input type="text" placeholder="32830" /></div>
+          <div class="form-group"><label>Tobacco Use *</label><select><option>No</option><option>Yes</option></select></div>
+        </div>
+
+        <h4 style="margin:24px 0 16px;font-size:.875rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);">Employment</h4>
+        <div class="form-row">
+          <div class="form-group"><label>Industry *</label>
+            <select>
+              <option>Theme Park</option><option>Amusement / Water Park</option>
+              <option>Carnival / Fair</option><option>Content Creator</option><option>Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Employment Status *</label>
+            <select>
+              <option>Full-time employee (W-2)</option><option>Part-time employee (W-2)</option>
+              <option>Seasonal employee</option><option>Self-employed / 1099</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Requested Start Date *</label><input type="date" /></div>
+          <div class="form-group"><label>Coverage Type *</label>
+            <select>
+              <option>Individual</option><option>Individual + Spouse</option>
+              <option>Individual + Children</option><option>Family</option>
+            </select>
+          </div>
+        </div>
+
+        <h4 style="margin:24px 0 16px;font-size:.875rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);">Payment</h4>
+        <div class="form-group"><label>Payment Method *</label>
+          <select>
+            <option>Monthly (credit/debit card)</option>
+            <option>Monthly (bank draft / ACH)</option>
+            <option>Annual (10% discount)</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="margin-top:8px;">
+          <label class="checkbox-option" style="padding:16px;border:1.5px solid var(--border);border-radius:var(--radius);">
+            <input type="checkbox" required />
+            I agree to the <a href="#" style="color:var(--primary);">Terms of Service</a> and <a href="#" style="color:var(--primary);">Privacy Policy</a>. I certify that the information I have provided is true and accurate.
+          </label>
+        </div>
+
+        <div class="form-submit" style="margin-top:24px;">
+          <button class="btn btn-primary btn-full btn-lg" onclick="submitEnroll()">Submit Application →</button>
+        </div>
+
+        <div id="enrollSuccess" style="display:none;text-align:center;padding:36px;background:#D1FAE5;border-radius:var(--radius);margin-top:16px;">
+          <div style="font-size:3.5rem;margin-bottom:16px;">🎉</div>
+          <h3 style="font-family:var(--font-display);font-size:1.4rem;margin-bottom:8px;">Application Submitted!</h3>
+          <p style="color:#065F46;">Your application is under review. You'll receive an email confirmation shortly, and a licensed agent will contact you within 24 hours to finalize your coverage.</p>
+          <p style="margin-top:12px;font-size:.875rem;color:#065F46;">Application #: PG-2024-<strong id="appNum"></strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-icon">🎡</span><span class="logo-text">Park<span class="logo-accent">Gard</span></span></div>
+          <p>Health insurance purpose-built for the entertainment industry.</p>
+        </div>
+        <div class="footer-col"><h4>Plans</h4><ul><li><a href="plans.html">View All Plans</a></li><li><a href="quote.html">Get a Quote</a></li></ul></div>
+        <div class="footer-col"><h4>Support</h4><ul><li><a href="#">Member Login</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ParkGard Insurance LLC. All rights reserved.</p>
+        <div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div>
+        <p class="footer-disclaimer">ParkGard Insurance LLC is licensed in all 50 states. Submission does not guarantee coverage.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <style>
+    .enroll-plan-select {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .enroll-plan-select h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .enroll-plans { display: flex; flex-direction: column; gap: 10px; }
+    .enroll-plan-option {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      background: #fff;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .enroll-plan-option:hover { border-color: var(--primary); }
+    .enroll-plan-option.selected { border-color: var(--primary); background: var(--primary-light); }
+    .ep-check { font-size: 1.2rem; color: var(--primary); width: 20px; flex-shrink: 0; }
+    .ep-info strong { display: block; font-size: .95rem; font-weight: 700; }
+    .ep-info span { font-size: .825rem; color: var(--text-muted); }
+    .checkbox-option input { width: 18px; height: 18px; flex-shrink: 0; }
+  </style>
+  <script>
+    function selectPlan(el, plan) {
+      document.querySelectorAll('.enroll-plan-option').forEach(e => {
+        e.classList.remove('selected');
+        e.querySelector('.ep-check').textContent = '○';
+      });
+      el.classList.add('selected');
+      el.querySelector('.ep-check').textContent = '●';
+    }
+
+    function submitEnroll() {
+      const num = Math.floor(Math.random() * 90000) + 10000;
+      document.getElementById('appNum').textContent = num;
+      document.getElementById('enrollSuccess').style.display = 'block';
+      document.getElementById('enrollSuccess').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('plan')) {
+      const planMap = { starter: 0, gold: 1, platinum: 2 };
+      const idx = planMap[params.get('plan')];
+      if (idx !== undefined) {
+        const options = document.querySelectorAll('.enroll-plan-option');
+        options.forEach((o, i) => {
+          o.classList.remove('selected');
+          o.querySelector('.ep-check').textContent = '○';
+        });
+        options[idx].classList.add('selected');
+        options[idx].querySelector('.ep-check').textContent = '●';
+      }
+    }
+  </script>
+</body>
+</html>

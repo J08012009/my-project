@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plans & Pricing – ParkGard Health Insurance</title>
+  <meta name="description" content="Compare ParkGard health insurance plans for entertainment industry workers. Starter, Gold, and Platinum options starting at $89/month." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">
+        <span class="logo-icon">🎡</span>
+        <span class="logo-text">Park<span class="logo-accent">Gard</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="plans.html" class="active">Plans</a></li>
+        <li><a href="who-we-cover.html">Who We Cover</a></li>
+        <li><a href="benefits.html">Benefits</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="quote.html" class="btn btn-outline">Get a Quote</a>
+        <a href="enroll.html" class="btn btn-primary">Enroll Now</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-badge" style="background:rgba(255,255,255,.15);color:#fff;margin-bottom:16px;">Our Plans</div>
+      <h1>Simple, Transparent Pricing</h1>
+      <p>No hidden fees. No confusing jargon. Choose the plan that fits your life and budget.</p>
+    </div>
+  </section>
+
+  <!-- Plan Toggle -->
+  <section class="section bg-light" style="padding-top:48px;">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:48px;">
+        <div class="toggle-group">
+          <button class="toggle-btn active" onclick="setFreq('monthly', this)">Monthly</button>
+          <button class="toggle-btn" onclick="setFreq('annual', this)">Annual <span class="save-badge">Save 15%</span></button>
+        </div>
+      </div>
+
+      <div class="plans-compare-grid">
+        <!-- Starter -->
+        <div class="plan-card">
+          <div class="plan-tier">Starter</div>
+          <div class="plan-name">ParkGuard Starter</div>
+          <div class="plan-price">
+            <span class="price-from">from</span>
+            <span class="price-amount monthly-price">$89</span>
+            <span class="price-amount annual-price" style="display:none;">$76</span>
+            <span class="price-period">/month</span>
+          </div>
+          <p class="plan-desc">Essential protection for healthy individuals who need a safety net for major medical events without breaking the bank.</p>
+          <div class="plan-highlights">
+            <div class="plan-highlight"><span>Deductible</span><strong>$5,000</strong></div>
+            <div class="plan-highlight"><span>Out-of-Pocket Max</span><strong>$8,150</strong></div>
+            <div class="plan-highlight"><span>Coinsurance</span><strong>70/30</strong></div>
+            <div class="plan-highlight"><span>PCP Visit</span><strong>$35 co-pay</strong></div>
+          </div>
+          <ul class="plan-features">
+            <li>✓ Emergency & urgent care</li>
+            <li>✓ Telehealth (unlimited)</li>
+            <li>✓ Preventive care (100%)</li>
+            <li>✓ Generic prescriptions ($10)</li>
+            <li>✓ Lab work & imaging</li>
+            <li>✓ Ambulance services</li>
+            <li class="dimmed">✗ Dental & vision</li>
+            <li class="dimmed">✗ Mental health</li>
+            <li class="dimmed">✗ Specialist visits</li>
+          </ul>
+          <a href="quote.html?plan=starter" class="btn btn-outline btn-full">Get Quote</a>
+        </div>
+
+        <!-- Gold -->
+        <div class="plan-card popular">
+          <div class="popular-badge">⭐ Best Value</div>
+          <div class="plan-tier">Standard</div>
+          <div class="plan-name">ParkPlus Gold</div>
+          <div class="plan-price">
+            <span class="price-from">from</span>
+            <span class="price-amount monthly-price">$159</span>
+            <span class="price-amount annual-price" style="display:none;">$135</span>
+            <span class="price-period">/month</span>
+          </div>
+          <p class="plan-desc">Our most popular plan — comprehensive coverage designed for the day-to-day reality of entertainment industry work.</p>
+          <div class="plan-highlights">
+            <div class="plan-highlight"><span>Deductible</span><strong>$2,500</strong></div>
+            <div class="plan-highlight"><span>Out-of-Pocket Max</span><strong>$6,000</strong></div>
+            <div class="plan-highlight"><span>Coinsurance</span><strong>80/20</strong></div>
+            <div class="plan-highlight"><span>PCP Visit</span><strong>$20 co-pay</strong></div>
+          </div>
+          <ul class="plan-features">
+            <li>✓ Everything in Starter</li>
+            <li>✓ Specialist visits ($40)</li>
+            <li>✓ Mental health & therapy</li>
+            <li>✓ Dental cleanings & x-rays</li>
+            <li>✓ Vision exams & allowance</li>
+            <li>✓ Brand name prescriptions</li>
+            <li>✓ On-the-job injury support</li>
+            <li>✓ Physical therapy (20 visits)</li>
+            <li class="dimmed">✗ Out-of-network</li>
+          </ul>
+          <a href="quote.html?plan=gold" class="btn btn-primary btn-full">Get Quote</a>
+        </div>
+
+        <!-- Platinum -->
+        <div class="plan-card">
+          <div class="plan-tier">Premium</div>
+          <div class="plan-name">ParkElite Platinum</div>
+          <div class="plan-price">
+            <span class="price-from">from</span>
+            <span class="price-amount monthly-price">$249</span>
+            <span class="price-amount annual-price" style="display:none;">$212</span>
+            <span class="price-period">/month</span>
+          </div>
+          <p class="plan-desc">Full-spectrum coverage with concierge support. The best choice for families and content creators with complex coverage needs.</p>
+          <div class="plan-highlights">
+            <div class="plan-highlight"><span>Deductible</span><strong>$1,000</strong></div>
+            <div class="plan-highlight"><span>Out-of-Pocket Max</span><strong>$3,500</strong></div>
+            <div class="plan-highlight"><span>Coinsurance</span><strong>90/10</strong></div>
+            <div class="plan-highlight"><span>PCP Visit</span><strong>$10 co-pay</strong></div>
+          </div>
+          <ul class="plan-features">
+            <li>✓ Everything in Gold</li>
+            <li>✓ Family coverage options</li>
+            <li>✓ Out-of-network coverage</li>
+            <li>✓ Concierge care team</li>
+            <li>✓ Equipment injury rider</li>
+            <li>✓ Priority claims (&lt;24hr)</li>
+            <li>✓ Unlimited PT & chiro</li>
+            <li>✓ Fertility benefits</li>
+            <li>✓ International emergency</li>
+          </ul>
+          <a href="quote.html?plan=platinum" class="btn btn-outline btn-full">Get Quote</a>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:48px;color:var(--text-muted);font-size:.875rem;">
+        <p>All plans include <strong>telehealth, preventive care, and nationwide coverage</strong>. Prices shown are estimates for a 30-year-old non-smoker. Your actual premium depends on age, location, and tobacco use.</p>
+        <p style="margin-top:8px;">Need a group plan for your park or organization? <a href="contact.html" style="color:var(--primary);font-weight:600;">Contact our group sales team →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Add-Ons -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Optional Add-Ons</div>
+        <h2>Customize Your Coverage</h2>
+        <p>Enhance any plan with these affordable riders and supplemental benefits.</p>
+      </div>
+      <div class="addons-grid">
+        <div class="addon-card">
+          <div class="addon-icon">🦷</div>
+          <h3>Dental Plus</h3>
+          <p>Expanded dental including crowns, root canals, and orthodontics. From <strong>$28/mo</strong>.</p>
+        </div>
+        <div class="addon-card">
+          <div class="addon-icon">👁️</div>
+          <h3>Vision Premium</h3>
+          <p>Enhanced vision with higher frame allowance and contact lens benefits. From <strong>$12/mo</strong>.</p>
+        </div>
+        <div class="addon-card">
+          <div class="addon-icon">🧠</div>
+          <h3>Mental Health Boost</h3>
+          <p>Unlimited therapy sessions and psychiatry visits for the Starter plan. From <strong>$35/mo</strong>.</p>
+        </div>
+        <div class="addon-card">
+          <div class="addon-icon">📹</div>
+          <h3>Creator Rider</h3>
+          <p>Equipment injury coverage and business liability protection for content creators. From <strong>$22/mo</strong>.</p>
+        </div>
+        <div class="addon-card">
+          <div class="addon-icon">👨‍👩‍👧</div>
+          <h3>Family Bundle</h3>
+          <p>Add spouse and up to 3 dependents at discounted family rates. From <strong>$120/mo</strong> additional.</p>
+        </div>
+        <div class="addon-card">
+          <div class="addon-icon">✈️</div>
+          <h3>Travel Medical</h3>
+          <p>International emergency coverage for content creators and traveling carnival workers. From <strong>$18/mo</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="cta-bg"></div>
+    <div class="container">
+      <div class="cta-content">
+        <h2>Not Sure Which Plan to Pick?</h2>
+        <p>Our licensed agents specialize in entertainment industry coverage. Get personalized help choosing the right plan.</p>
+        <div class="cta-actions">
+          <a href="quote.html" class="btn btn-white btn-lg">Get My Free Quote</a>
+          <a href="contact.html" class="btn btn-outline-white btn-lg">Talk to an Agent</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-icon">🎡</span><span class="logo-text">Park<span class="logo-accent">Gard</span></span></div>
+          <p>Health insurance purpose-built for the entertainment industry.</p>
+        </div>
+        <div class="footer-col"><h4>Plans</h4><ul><li><a href="plans.html">ParkGuard Starter</a></li><li><a href="plans.html">ParkPlus Gold</a></li><li><a href="plans.html">ParkElite Platinum</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Support</h4><ul><li><a href="#">Member Login</a></li><li><a href="#">Claims</a></li><li><a href="#">FAQ</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ParkGard Insurance LLC. All rights reserved.</p>
+        <div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Licenses</a></div>
+        <p class="footer-disclaimer">ParkGard Insurance LLC is licensed in all 50 states. Benefits, premiums, and availability may vary by state and plan selected.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <style>
+    .toggle-group {
+      display: inline-flex;
+      background: var(--border);
+      border-radius: 100px;
+      padding: 4px;
+      gap: 4px;
+    }
+    .toggle-btn {
+      padding: 10px 24px;
+      border: none;
+      border-radius: 100px;
+      font-family: var(--font);
+      font-size: .9rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text-muted);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toggle-btn.active { background: var(--primary); color: #fff; }
+    .save-badge {
+      background: var(--success);
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 100px;
+      font-size: .7rem;
+    }
+    .plans-compare-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .plan-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 24px;
+      padding: 16px;
+      background: var(--bg-light);
+      border-radius: var(--radius);
+    }
+    .plan-highlight {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .plan-highlight span {
+      font-size: .7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    .plan-highlight strong {
+      font-size: .875rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .addons-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .addon-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .addon-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-xl); }
+    .addon-icon { font-size: 2.2rem; margin-bottom: 12px; }
+    .addon-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .addon-card p { font-size: .875rem; color: var(--text-muted); line-height: 1.6; }
+    @media (max-width: 900px) {
+      .plans-compare-grid, .addons-grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
+    }
+  </style>
+  <script>
+    function setFreq(type, btn) {
+      document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.monthly-price').forEach(el => el.style.display = type === 'monthly' ? '' : 'none');
+      document.querySelectorAll('.annual-price').forEach(el => el.style.display = type === 'annual' ? '' : 'none');
+    }
+  </script>
+</body>
+</html>

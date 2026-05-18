@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – ParkGard Health Insurance</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">
+        <span class="logo-icon">🎡</span>
+        <span class="logo-text">Park<span class="logo-accent">Gard</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="plans.html">Plans</a></li>
+        <li><a href="who-we-cover.html">Who We Cover</a></li>
+        <li><a href="benefits.html">Benefits</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="quote.html" class="btn btn-outline">Get a Quote</a>
+        <a href="enroll.html" class="btn btn-primary">Enroll Now</a>
+      </div>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-badge" style="background:rgba(255,255,255,.15);color:#fff;margin-bottom:16px;">Get in Touch</div>
+      <h1>We're Here to Help</h1>
+      <p>Questions about coverage? Want to talk to a licensed agent? We're available 7 days a week.</p>
+    </div>
+  </section>
+
+  <section class="section bg-light" style="padding-top:0;margin-top:0;">
+    <div class="container" style="padding-top:64px;">
+      <div class="contact-layout">
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <h3>Send Us a Message</h3>
+          <p class="step-subtitle">We respond to all inquiries within 2 business hours.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="Alex" />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Johnson" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="alex@email.com" />
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" placeholder="(555) 000-0000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>What can we help you with?</label>
+            <select>
+              <option>I want to learn about plans</option>
+              <option>I need help with enrollment</option>
+              <option>I have a question about my existing plan</option>
+              <option>I need help with a claim</option>
+              <option>Group / employer coverage inquiry</option>
+              <option>Media / press inquiry</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Industry</label>
+            <select>
+              <option>Theme Park</option>
+              <option>Amusement / Water Park</option>
+              <option>Carnival / Fair</option>
+              <option>Content Creator</option>
+              <option>Other Entertainment</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea placeholder="Tell us how we can help..."></textarea>
+          </div>
+          <div class="form-submit">
+            <button class="btn btn-primary btn-full btn-lg" onclick="submitContact()">Send Message</button>
+          </div>
+          <div id="contactSuccess" style="display:none;text-align:center;padding:24px;background:#D1FAE5;border-radius:var(--radius);margin-top:16px;">
+            <div style="font-size:2rem;margin-bottom:8px;">✅</div>
+            <strong>Message sent!</strong>
+            <p style="font-size:.875rem;color:#065F46;margin-top:4px;">A licensed agent will reach out within 2 business hours.</p>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="contact-methods">
+            <h3>Other Ways to Reach Us</h3>
+            <div class="contact-method">
+              <div class="cm-icon">📞</div>
+              <div>
+                <strong>Call Us</strong>
+                <p>(800) 727-5427</p>
+                <span>Mon–Sat 8am–8pm ET · Sun 10am–6pm ET</span>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="cm-icon">💬</div>
+              <div>
+                <strong>Live Chat</strong>
+                <p>Chat with an agent now</p>
+                <span>Available 7 days a week, 8am–10pm ET</span>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="cm-icon">📧</div>
+              <div>
+                <strong>Email</strong>
+                <p>support@parkgard.com</p>
+                <span>We respond within 2 business hours</span>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="cm-icon">📍</div>
+              <div>
+                <strong>Headquarters</strong>
+                <p>1234 Magic Mile Blvd, Suite 400</p>
+                <span>Orlando, FL 32830</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="quick-links-card">
+            <h4>Quick Links</h4>
+            <a href="quote.html" class="quick-link">🎯 Get a Free Quote</a>
+            <a href="plans.html" class="quick-link">📋 Compare Plans</a>
+            <a href="#" class="quick-link">🔐 Member Login</a>
+            <a href="#" class="quick-link">📄 File a Claim</a>
+            <a href="#" class="quick-link">🔍 Find a Provider</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-icon">🎡</span><span class="logo-text">Park<span class="logo-accent">Gard</span></span></div>
+          <p>Health insurance purpose-built for the entertainment industry.</p>
+        </div>
+        <div class="footer-col"><h4>Plans</h4><ul><li><a href="plans.html">View All Plans</a></li><li><a href="quote.html">Get a Quote</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Support</h4><ul><li><a href="#">Member Login</a></li><li><a href="#">Claims</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ParkGard Insurance LLC. All rights reserved.</p>
+        <div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div>
+        <p class="footer-disclaimer">ParkGard Insurance LLC is licensed in all 50 states.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .contact-form-wrapper {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-xl);
+    }
+    .contact-form-wrapper h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .contact-methods { margin-bottom: 28px; }
+    .contact-methods h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    .contact-method {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .contact-method:last-child { border-bottom: none; }
+    .cm-icon {
+      font-size: 1.4rem;
+      width: 44px;
+      height: 44px;
+      background: var(--primary-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-method strong { display: block; font-size: .9rem; font-weight: 700; }
+    .contact-method p { font-size: 1rem; font-weight: 600; color: var(--primary); margin: 2px 0; }
+    .contact-method span { font-size: .78rem; color: var(--text-muted); }
+    .quick-links-card {
+      background: linear-gradient(135deg, var(--bg-dark), #312E81);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+    }
+    .quick-links-card h4 {
+      color: #fff;
+      font-size: .875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 16px;
+    }
+    .quick-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      color: rgba(255,255,255,.8);
+      border-radius: 8px;
+      font-size: .875rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    .quick-link:hover { background: rgba(255,255,255,.1); color: #fff; padding-left: 16px; }
+    @media (max-width: 768px) {
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script>
+    function submitContact() {
+      document.getElementById('contactSuccess').style.display = 'block';
+      document.getElementById('contactSuccess').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
